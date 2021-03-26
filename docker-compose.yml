@@ -1,20 +1,12 @@
 version: '3.7'
-
 services:
-
   db:
-    image: postgres
-    restart: always
-    environment:
-      POSTGRES_DB: apps
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: KJSDgfw56sdgfguyDFC75
+    image: postgres:12.0-alpine
     ports:
-      - 3036:5432
-
-# админка. при необходимости можно включить
-#  adminer:
-#    image: adminer
-#    restart: always
-#    ports:
-#      - 8090:8080
+      - '5432:5432'
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=app_db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
