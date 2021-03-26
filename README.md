@@ -12,3 +12,4 @@
 - проверяем результат путем запроса: ```GET http://localhost:9999/api/cards```
 
 ### Результат:
+![Screenshot_20](https://user-images.githubusercontent.com/73786860/112627407-a01a5c80-8e42-11eb-804c-faeee0b86b70.jpg)
